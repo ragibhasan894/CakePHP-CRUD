@@ -20,6 +20,11 @@
 			}
 		}
 
+		public function view($id) {
+			$data = $this->Topic->findById($id);
+			$this->set('topic',$data);
+		}
+
 	}
 
 

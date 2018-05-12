@@ -10,11 +10,15 @@
 	</tr>
 	<?php foreach($topics as $topic) : ?>
 	<tr>
-		<td><?php echo $topic['Topic']['title']; ?></td>
-		<td><?php echo $topic['Topic']['user_id']; ?></td>
-		<td><?php echo $topic['Topic']['visible']; ?></td>
-		<td><?php echo $topic['Topic']['created']; ?></td>
-		<td><?php echo $topic['Topic']['modified']; ?></td>
+		<td><?php echo $this->HTML->link($topic['Topic']['title'], array('controller'=>'topics','action'=>'view',$topic['Topic']['id'])); ?></td>
+
+		<td><?php echo $this->HTML->link($topic['Topic']['user_id'], array('controller'=>'topics','action'=>'view',$topic['Topic']['id'])); ?></td>
+
+		<td><?php echo $this->HTML->link($topic['Topic']['visible'], array('controller'=>'topics','action'=>'view',$topic['Topic']['id'])); ?></td>
+
+		<td><?php echo $this->HTML->link($topic['Topic']['created'], array('controller'=>'topics','action'=>'view',$topic['Topic']['id'])); ?></td>
+
+		<td><?php echo $this->HTML->link($topic['Topic']['modified'], array('controller'=>'topics','action'=>'view',$topic['Topic']['id'])); ?></td>
 	</tr>
 	<?php endforeach; ?>
 	<?php unset($topic); ?>
