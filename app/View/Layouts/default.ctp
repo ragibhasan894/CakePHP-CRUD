@@ -27,13 +27,20 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	</title>
 	<?php
 		echo $this->Html->meta('icon');
-
+		/*
 		echo $this->Html->css(['bootstrap.min.css']);
 		echo $this->Html->script(['bootstrap.min.js']);
+		*/
+
+		echo $this->Html->script(['custom.js']);
+		echo $this->Html->script(['jquery-1.11.3.min.js']);
+		echo $this->Html->script(['jquery-migrate-1.2.1.min.js']);
+		echo $this->Html->script(['bootstrap.min.js']);
+		echo $this->Html->css(['bootstrap.min.css']);
 
 		echo $this->fetch('meta');
-		echo $this->fetch('css');
 		echo $this->fetch('script');
+		echo $this->fetch('css');		
 	?>
 </head>
 <body>
