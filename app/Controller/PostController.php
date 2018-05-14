@@ -25,6 +25,7 @@
 			$data = $this->Post->findById($id);
 			$this->set('post',$data);
 		}
+
 	}
 
 ?>
