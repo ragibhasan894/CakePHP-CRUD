@@ -25,6 +25,11 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		<?php echo $cakeDescription ?>:
 		<?php echo $title_for_layout; ?>
 	</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+    <script type="text/javascript" src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
 	<?php
 		echo $this->Html->meta('icon');
 		/*
@@ -32,19 +37,19 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		echo $this->Html->script(['bootstrap.min.js']);
 		*/
 
-		echo $this->Html->script(['custom.js']);
-		echo $this->Html->script(['jquery-1.11.3.min.js']);
-		echo $this->Html->script(['jquery-migrate-1.2.1.min.js']);
-		echo $this->Html->script(['bootstrap.min.js']);
-		echo $this->Html->css(['bootstrap.min.css']);
+		// echo $this->Html->script(['custom.js']);
+		// echo $this->Html->script(['jquery-1.11.3.min.js']);
+		// echo $this->Html->script(['jquery-migrate-1.2.1.min.js']);
+		 echo $this->Html->script(['bootstrap.min.js']);
+		 echo $this->Html->css(['bootstrap.min.css']);
 
-		echo $this->fetch('meta');
-		echo $this->fetch('script');
-		echo $this->fetch('css');		
+		// echo $this->fetch('meta');
+		// echo $this->fetch('script');
+		// echo $this->fetch('css');		
 	?>
 </head>
 <body>
-	<div id="container" class="container">
+	<div id="container" class="container table-responsive">
 		<div id="header">
 			<!-- <h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1> -->
 		</div>
